@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 1190443}
   - component: {fileID: 1190442}
   - component: {fileID: 1190441}
-  - component: {fileID: 1190440}
   - component: {fileID: 1190446}
   - component: {fileID: 1190447}
   - component: {fileID: 1190448}
@@ -146,19 +145,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1190440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190439}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce4482a2b4420ed41ab49cfe515f38a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
 --- !u!135 &1190441
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -306,7 +292,6 @@ GameObject:
   - component: {fileID: 34629218}
   - component: {fileID: 34629217}
   - component: {fileID: 34629216}
-  - component: {fileID: 34629215}
   - component: {fileID: 34629214}
   - component: {fileID: 34629213}
   - component: {fileID: 34629212}
@@ -366,19 +351,6 @@ MonoBehaviour:
   maxVelocity: 10
   velocity: {x: 0, y: 0, z: 0}
   slowingRadius: 2
---- !u!114 &34629215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34629211}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce4482a2b4420ed41ab49cfe515f38a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
 --- !u!135 &34629216
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -495,7 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radiusAvoidance: 2
-  maxAvoidence: 2
+  maxAvoidence: 21
   leader: {fileID: 1725178117}
 --- !u!4 &225655345
 Transform:
@@ -736,7 +708,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   slowingRadius: 1
   behindDistance: 5
-  maxForce: 0.03
+  maxForce: 0.009
   maxSpeed: 5
 --- !u!114 &1204933491
 MonoBehaviour:
@@ -930,7 +902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 1725178116}
-  speed: 1
+  speed: 0
 --- !u!33 &1725178119
 MeshFilter:
   m_ObjectHideFlags: 0
