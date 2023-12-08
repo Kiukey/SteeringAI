@@ -1,12 +1,11 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIManager : SingletonTemplate<AIManager>, IManager<int, FollowBehaviourTest>
+public class SteeringManager : SingletonTemplate<SteeringManager>, IManager<int, SteeringComponent>
 {
-    public FollowBehaviourTest this[int _index] => Get(_index);
-    private Dictionary<int, FollowBehaviourTest> managedItems = new Dictionary<int, FollowBehaviourTest>();
+    public SteeringComponent this[int _index] => Get(_index);
+    private Dictionary<int, SteeringComponent> managedItems = new Dictionary<int, SteeringComponent>();
     [SerializeField,Range(0,10000)] private float radiusAvoidance = 2;
     [SerializeField] public float maxAvoidence = 1;
     [SerializeField] private Transform leader = null;
@@ -16,7 +15,7 @@ public class AIManager : SingletonTemplate<AIManager>, IManager<int, FollowBehav
     public float RadiusAvoidance => radiusAvoidance;
     public int Count => managedItems.Count;
     
-    public void Register(int _key, FollowBehaviourTest _value)
+    public void Register(int _key, SteeringComponent _value)
     {
         if (Exist(_key))
             return;
@@ -32,7 +31,7 @@ public class AIManager : SingletonTemplate<AIManager>, IManager<int, FollowBehav
     {
         return managedItems.ContainsKey(_key);
     }
-    public FollowBehaviourTest Get(int _key)
+    public SteeringComponent Get(int _key)
     {
         if (!Exist(_key)) return null;
         return managedItems[_key];

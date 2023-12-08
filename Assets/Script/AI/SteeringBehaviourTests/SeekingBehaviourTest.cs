@@ -1,6 +1,6 @@
 using UnityEngine;
 using V3 = UnityEngine.Vector3;
-public class SeekingBehaviour : MonoBehaviour
+public class SeekingBehaviourTest : MonoBehaviour
 {
     [SerializeField] protected float maxVelocity = 0;
     [SerializeField] protected V3 velocity = Vector3.zero;

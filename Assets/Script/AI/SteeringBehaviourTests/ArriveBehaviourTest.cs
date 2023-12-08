@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using V3 = UnityEngine.Vector3;
-public class ArriveBehaviour : MonoBehaviour
+public class ArriveBehaviourTest : MonoBehaviour
 {
     [SerializeField] protected float maxVelocity = 0;
     [SerializeField] protected V3 velocity = Vector3.zero;

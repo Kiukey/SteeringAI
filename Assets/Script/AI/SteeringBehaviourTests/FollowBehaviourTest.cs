@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using V3 = UnityEngine.Vector3;
 
-public class FollowBehaviour : ArriveBehaviour, IManagedItem<int>
+public class FollowBehaviourTest : ArriveBehaviourTest, IManagedItem<int>
 {
     private int id = 0;
     [SerializeField,Range(0,100f)] private float behindDistance = 1f;
@@ -48,7 +45,7 @@ public class FollowBehaviour : ArriveBehaviour, IManagedItem<int>
         V3 _toRet = V3.zero;
         if (!_manager) return _toRet;
         _toRet = Arrive(GetBehindPoint());
-        _toRet += Avoid();
+        // _toRet += Avoid();
         return _toRet;
     }
     
@@ -61,7 +58,7 @@ public class FollowBehaviour : ArriveBehaviour, IManagedItem<int>
 
     private V3 GetBehindPoint()
     {
-        if (!AIManager.Manager?.Leader)
+        if (!AIManager.Manager?.Leader || !leaderRigidBody)
             return V3.zero;
         V3 _invertVelocity = LeaderVelocity * -1;
         _invertVelocity = _invertVelocity.normalized * behindDistance;
@@ -77,7 +74,7 @@ public class FollowBehaviour : ArriveBehaviour, IManagedItem<int>
         int _nbr = 0;
         for (int i = 0; i < _count; i++)
         {
-            FollowBehaviour _other = _manager[i];
+            FollowBehaviourTest _other = _manager[i];
             if(!_other) continue;
             float _dist = V3.Distance(_other.transform.position, transform.position);
             if(_other == this || _dist > _manager.RadiusAvoidance) continue;
@@ -95,7 +92,7 @@ public class FollowBehaviour : ArriveBehaviour, IManagedItem<int>
 
         _toRet = _toRet.normalized;
         _toRet *= _manager.maxAvoidence;
-        return _toRet - velocity;
+        return _toRet;
     }
     public void Register()
     {
