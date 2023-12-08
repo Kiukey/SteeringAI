@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FollowBehaviour
   m_EditorClassIdentifier: 
   slowingRadius: 1
-  behindDistance: 1
+  behindDistance: 5
