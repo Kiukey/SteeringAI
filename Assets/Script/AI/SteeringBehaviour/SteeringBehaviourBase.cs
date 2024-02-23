@@ -8,6 +8,10 @@ public abstract class SteeringBehaviourBase : ScriptableObject
     {
         owner = _owner;
     }
-
     public abstract Vector3 Behaviour(Vector3 _velocity);
+
+    public virtual void DebugState()
+    {
+        
+    }
 }

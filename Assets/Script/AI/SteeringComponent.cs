@@ -30,6 +30,15 @@ public class SteeringComponent : MonoBehaviour, IManagedItem<int>
         transform.position += velocity * Time.deltaTime;
     }
 
+    private void OnDrawGizmos()
+    {
+        foreach (SteeringBehaviourBase _behaviour in steeringsBehaviours)
+        {
+            if(_behaviour == null) continue;
+            _behaviour.DebugState();
+        }
+    }
+
     private Vector3 GetSteeringForces()
     {
         Vector3 _toRet = Vector3.zero;
@@ -61,7 +70,7 @@ public class SteeringComponent : MonoBehaviour, IManagedItem<int>
 
     public void Register()
     {
-        if (!AIManager.Manager) return;
+        if (!SteeringManager.Manager) return;
         id = SteeringManager.Manager.Count;
         Debug.Log(id);
         SteeringManager.Manager.Register(id,this);

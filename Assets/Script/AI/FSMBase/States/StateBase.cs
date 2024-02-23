@@ -46,6 +46,9 @@ public abstract class StateBase
     #region operators
 
     public static bool operator !(StateBase _me) => _me.Equals(null);
-    
+    public static implicit operator bool(StateBase _this)
+    {
+        return _this != null;
+    }
     #endregion
 }

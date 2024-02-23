@@ -4,7 +4,6 @@ public abstract class FSMBase : MonoBehaviour
 {
     private StateBase currentState = null;
     
-    
     protected void ChangeState<T>() where T : new()
     {
         if(currentState != null) currentState.DestroyState();
@@ -28,13 +27,11 @@ public abstract class FSMBase : MonoBehaviour
         currentState.DestroyState();
     }
     #endregion
+
     #region Unity Methods
     private void Start()
     {
-        InitFSM();
-        if(currentState)
-            Debug.Log("ok");
-            
+        InitFSM(); 
     }
     private void Update()
     {
