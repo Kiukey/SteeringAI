@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a31cbc6cb88e7843a955f051b408970, type: 3}
-  m_Name: AvoidanceBehaviour
+  m_Script: {fileID: 11500000, guid: 3417ce4ba12b856438f6f1276edb10ad, type: 3}
+  m_Name: Align Behaviour
   m_EditorClassIdentifier: 
-  maxAvoidance: 24

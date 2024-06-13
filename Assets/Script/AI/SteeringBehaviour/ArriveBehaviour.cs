@@ -6,9 +6,10 @@ using UnityEngine;
 public class ArriveBehaviour : SteeringBehaviourBase
 {
     [SerializeField,Range(0,100f)] protected float slowingRadius = 1;
+    
     public override Vector3 Behaviour(Vector3 _velocity)
     {
-        return Arrive(SteeringManager.Manager.Leader.position, _velocity);
+        return Arrive(AIManager.Manager.Leader.position, _velocity);
     }
 
     protected Vector3 Arrive(Vector3 _target,Vector3 _velocity)

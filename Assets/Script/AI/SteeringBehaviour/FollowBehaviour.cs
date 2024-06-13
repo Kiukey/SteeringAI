@@ -7,6 +7,7 @@ public class FollowBehaviour : ArriveBehaviour
 {
     [SerializeField,Range(0,100f)] private float behindDistance = 1f;
     private Rigidbody leaderRigidBody = null;
+    private Vector3 behaviourVelocity = Vector3.zero;
     private Vector3 LeaderVelocity => leaderRigidBody.velocity;
     private Vector3 LeaderPos => SteeringManager.Manager.Leader.position;
 
@@ -31,7 +32,7 @@ public class FollowBehaviour : ArriveBehaviour
     }
     private Rigidbody GetLeaderRigidBody()
     {
-        AIManager _manager = AIManager.Manager;
+        SteeringManager _manager = SteeringManager.Manager;
         if (!_manager) return null;
         return _manager.Leader?.GetComponent<Rigidbody>();
     }
@@ -43,5 +44,12 @@ public class FollowBehaviour : ArriveBehaviour
         Vector3 _invertVelocity = LeaderVelocity * -1;
         _invertVelocity = _invertVelocity.normalized * behindDistance;
         return LeaderPos + _invertVelocity;
+    }
+
+    public override void DebugState()
+    {
+        base.DebugState();
+        Gizmos.color = Color.yellow;
+        //Gizmos.DrawLine(OwnerPos)
     }
 }

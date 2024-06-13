@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Cohesion Behaviour
   m_EditorClassIdentifier: 
   range: 10
-  steeringForce: 4
+  steeringForce: 1

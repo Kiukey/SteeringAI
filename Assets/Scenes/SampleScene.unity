@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 203658547}
   - component: {fileID: 203658546}
   - component: {fileID: 203658545}
+  - component: {fileID: 203658550}
   m_Layer: 0
   m_Name: SeekNewGen (3)
   m_TagString: Untagged
@@ -158,10 +159,12 @@ MonoBehaviour:
   steeringsBehaviours:
   - {fileID: 11400000, guid: d7718e3590b250c42a5ae2b225f01e6a, type: 2}
   - {fileID: 11400000, guid: b04f7833db04b5a4c9318a3c0384921d, type: 2}
-  velocity: {x: 0, y: 0, z: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}
   maxSteeringForce: 0.03
   maxSpeed: 10
   maxVelocity: 10
+  circleColors: []
+  useDebug: 1
 --- !u!135 &203658546
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -248,6 +251,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &203658550
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203658544}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &225655343
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +354,7 @@ GameObject:
   - component: {fileID: 363506395}
   - component: {fileID: 363506394}
   - component: {fileID: 363506393}
+  - component: {fileID: 363506398}
   m_Layer: 0
   m_Name: SeekNewGen (8)
   m_TagString: Untagged
@@ -346,10 +377,12 @@ MonoBehaviour:
   steeringsBehaviours:
   - {fileID: 11400000, guid: d7718e3590b250c42a5ae2b225f01e6a, type: 2}
   - {fileID: 11400000, guid: b04f7833db04b5a4c9318a3c0384921d, type: 2}
-  velocity: {x: 0, y: 0, z: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}
   maxSteeringForce: 0.03
   maxSpeed: 10
   maxVelocity: 10
+  circleColors: []
+  useDebug: 1
 --- !u!135 &363506394
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -436,6 +469,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &363506398
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363506392}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &526891371
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +509,7 @@ GameObject:
   - component: {fileID: 526891374}
   - component: {fileID: 526891373}
   - component: {fileID: 526891372}
+  - component: {fileID: 526891377}
   m_Layer: 0
   m_Name: SeekNewGen (10)
   m_TagString: Untagged
@@ -471,10 +532,12 @@ MonoBehaviour:
   steeringsBehaviours:
   - {fileID: 11400000, guid: d7718e3590b250c42a5ae2b225f01e6a, type: 2}
   - {fileID: 11400000, guid: b04f7833db04b5a4c9318a3c0384921d, type: 2}
-  velocity: {x: 0, y: 0, z: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}
   maxSteeringForce: 0.03
   maxSpeed: 10
   maxVelocity: 10
+  circleColors: []
+  useDebug: 1
 --- !u!135 &526891373
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -561,6 +624,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &526891377
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526891371}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &625398309
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +664,7 @@ GameObject:
   - component: {fileID: 625398312}
   - component: {fileID: 625398311}
   - component: {fileID: 625398310}
+  - component: {fileID: 625398315}
   m_Layer: 0
   m_Name: SeekNewGen (11)
   m_TagString: Untagged
@@ -596,10 +687,12 @@ MonoBehaviour:
   steeringsBehaviours:
   - {fileID: 11400000, guid: d7718e3590b250c42a5ae2b225f01e6a, type: 2}
   - {fileID: 11400000, guid: b04f7833db04b5a4c9318a3c0384921d, type: 2}
-  velocity: {x: 0, y: 0, z: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}
   maxSteeringForce: 0.03
   maxSpeed: 10
   maxVelocity: 10
+  circleColors: []
+  useDebug: 1
 --- !u!135 &625398311
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -686,6 +779,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &625398315
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625398309}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &667421048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -756,6 +876,7 @@ GameObject:
   - component: {fileID: 702883790}
   - component: {fileID: 702883789}
   - component: {fileID: 702883788}
+  - component: {fileID: 702883793}
   m_Layer: 0
   m_Name: SeekNewGen (5)
   m_TagString: Untagged
@@ -778,10 +899,12 @@ MonoBehaviour:
   steeringsBehaviours:
   - {fileID: 11400000, guid: d7718e3590b250c42a5ae2b225f01e6a, type: 2}
   - {fileID: 11400000, guid: b04f7833db04b5a4c9318a3c0384921d, type: 2}
-  velocity: {x: 0, y: 0, z: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}
   maxSteeringForce: 0.03
   maxSpeed: 10
   maxVelocity: 10
+  circleColors: []
+  useDebug: 1
 --- !u!135 &702883789
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -868,6 +991,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &702883793
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702883787}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,6 +1125,7 @@ GameObject:
   - component: {fileID: 918253654}
   - component: {fileID: 918253653}
   - component: {fileID: 918253652}
+  - component: {fileID: 918253657}
   m_Layer: 0
   m_Name: SeekNewGen (1)
   m_TagString: Untagged
@@ -997,10 +1148,12 @@ MonoBehaviour:
   steeringsBehaviours:
   - {fileID: 11400000, guid: d7718e3590b250c42a5ae2b225f01e6a, type: 2}
   - {fileID: 11400000, guid: b04f7833db04b5a4c9318a3c0384921d, type: 2}
-  velocity: {x: 0, y: 0, z: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}
   maxSteeringForce: 0.03
   maxSpeed: 10
   maxVelocity: 10
+  circleColors: []
+  useDebug: 1
 --- !u!135 &918253653
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1087,6 +1240,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &918253657
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918253651}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,6 +1372,7 @@ GameObject:
   - component: {fileID: 1207682494}
   - component: {fileID: 1207682493}
   - component: {fileID: 1207682492}
+  - component: {fileID: 1207682497}
   m_Layer: 0
   m_Name: SeekNewGen
   m_TagString: Untagged
@@ -1214,10 +1395,12 @@ MonoBehaviour:
   steeringsBehaviours:
   - {fileID: 11400000, guid: d7718e3590b250c42a5ae2b225f01e6a, type: 2}
   - {fileID: 11400000, guid: b04f7833db04b5a4c9318a3c0384921d, type: 2}
-  velocity: {x: 0, y: 0, z: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}
   maxSteeringForce: 0.03
   maxSpeed: 10
   maxVelocity: 10
+  circleColors: []
+  useDebug: 1
 --- !u!135 &1207682493
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1304,6 +1487,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1207682497
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207682491}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1327110063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,6 +1527,7 @@ GameObject:
   - component: {fileID: 1327110066}
   - component: {fileID: 1327110065}
   - component: {fileID: 1327110064}
+  - component: {fileID: 1327110069}
   m_Layer: 0
   m_Name: SeekNewGen (9)
   m_TagString: Untagged
@@ -1339,10 +1550,12 @@ MonoBehaviour:
   steeringsBehaviours:
   - {fileID: 11400000, guid: d7718e3590b250c42a5ae2b225f01e6a, type: 2}
   - {fileID: 11400000, guid: b04f7833db04b5a4c9318a3c0384921d, type: 2}
-  velocity: {x: 0, y: 0, z: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}
   maxSteeringForce: 0.03
   maxSpeed: 10
   maxVelocity: 10
+  circleColors: []
+  useDebug: 1
 --- !u!135 &1327110065
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1429,6 +1642,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1327110069
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327110063}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1602257786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,6 +1682,7 @@ GameObject:
   - component: {fileID: 1602257789}
   - component: {fileID: 1602257788}
   - component: {fileID: 1602257787}
+  - component: {fileID: 1602257792}
   m_Layer: 0
   m_Name: SeekNewGen (4)
   m_TagString: Untagged
@@ -1464,10 +1705,12 @@ MonoBehaviour:
   steeringsBehaviours:
   - {fileID: 11400000, guid: d7718e3590b250c42a5ae2b225f01e6a, type: 2}
   - {fileID: 11400000, guid: b04f7833db04b5a4c9318a3c0384921d, type: 2}
-  velocity: {x: 0, y: 0, z: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}
   maxSteeringForce: 0.03
   maxSpeed: 10
   maxVelocity: 10
+  circleColors: []
+  useDebug: 1
 --- !u!135 &1602257788
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1554,6 +1797,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1602257792
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602257786}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1608203317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,6 +1837,7 @@ GameObject:
   - component: {fileID: 1608203320}
   - component: {fileID: 1608203319}
   - component: {fileID: 1608203318}
+  - component: {fileID: 1608203323}
   m_Layer: 0
   m_Name: SeekNewGen (7)
   m_TagString: Untagged
@@ -1589,10 +1860,12 @@ MonoBehaviour:
   steeringsBehaviours:
   - {fileID: 11400000, guid: d7718e3590b250c42a5ae2b225f01e6a, type: 2}
   - {fileID: 11400000, guid: b04f7833db04b5a4c9318a3c0384921d, type: 2}
-  velocity: {x: 0, y: 0, z: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}
   maxSteeringForce: 0.03
   maxSpeed: 10
   maxVelocity: 10
+  circleColors: []
+  useDebug: 1
 --- !u!135 &1608203319
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1679,6 +1952,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1608203323
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608203317}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1725178115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,6 +2118,7 @@ GameObject:
   - component: {fileID: 1830048713}
   - component: {fileID: 1830048712}
   - component: {fileID: 1830048711}
+  - component: {fileID: 1830048716}
   m_Layer: 0
   m_Name: SeekNewGen (6)
   m_TagString: Untagged
@@ -1840,10 +2141,12 @@ MonoBehaviour:
   steeringsBehaviours:
   - {fileID: 11400000, guid: d7718e3590b250c42a5ae2b225f01e6a, type: 2}
   - {fileID: 11400000, guid: b04f7833db04b5a4c9318a3c0384921d, type: 2}
-  velocity: {x: 0, y: 0, z: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}
   maxSteeringForce: 0.03
   maxSpeed: 10
   maxVelocity: 10
+  circleColors: []
+  useDebug: 1
 --- !u!135 &1830048712
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1859,11 +2162,11 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1830048713
 MeshRenderer:
@@ -1930,6 +2233,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1830048716
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830048710}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1847044134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,6 +2273,7 @@ GameObject:
   - component: {fileID: 1847044137}
   - component: {fileID: 1847044136}
   - component: {fileID: 1847044135}
+  - component: {fileID: 1847044140}
   m_Layer: 0
   m_Name: SeekNewGen (2)
   m_TagString: Untagged
@@ -1965,10 +2296,12 @@ MonoBehaviour:
   steeringsBehaviours:
   - {fileID: 11400000, guid: d7718e3590b250c42a5ae2b225f01e6a, type: 2}
   - {fileID: 11400000, guid: b04f7833db04b5a4c9318a3c0384921d, type: 2}
-  velocity: {x: 0, y: 0, z: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}
   maxSteeringForce: 0.03
   maxSpeed: 10
   maxVelocity: 10
+  circleColors: []
+  useDebug: 1
 --- !u!135 &1847044136
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2055,6 +2388,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1847044140
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847044134}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

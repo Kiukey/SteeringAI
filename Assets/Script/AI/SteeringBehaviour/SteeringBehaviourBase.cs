@@ -14,4 +14,10 @@ public abstract class SteeringBehaviourBase : ScriptableObject
     {
         
     }
+
+    protected bool IsInRange(Vector3 _other, int _radiusIndex)
+    {
+        float _distance = Vector3.Distance(OwnerPos, _other);
+        return _distance < (owner.ColliderRadius / _radiusIndex) * 2;
+    }
 }
